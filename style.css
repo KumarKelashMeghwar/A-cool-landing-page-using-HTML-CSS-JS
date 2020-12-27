@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ 
+}
+
+#main-container{
+    width: 900px;
+    height: 500px;
+    background-image: url(background-image.jpg); 
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+}
+
+#cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover .hameburger{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgb(53, 228, 53);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#cover .hameburger::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transform: translate(-50%,-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid  rgb(53, 228, 53);
+    opacity: 1;
+    animation: pulse 0.7s infinite forwards;
+}
+
+
+@keyframes pulse{
+    100%{
+        opacity: 0;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+
+#cover .hameburger .bar{
+    width: 15px;
+    height: 2px;
+    background-color: rgb(53, 238, 53);
+    margin-bottom: 1.5px;
+    margin-top: 1.5px;
+    transition: 0.2s;
+}
+
+
+
+#cover header{
+    position: absolute;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    top: 0%;
+    left: -30%;
+    min-height: 500px;
+    width: 30%;
+    pointer-events: none;
+    transition: 1s ease-in-out;
+    opacity: 0.96;
+    z-index: 10;
+    transition-property: left;
+}
+
+#cover .active{
+    left: 0%;
+    pointer-events: all;
+    z-index: 5;
+}
+
+#cover .b2,.b0{
+    opacity: 0;
+}
+
+#cover .head ul{
+    list-style: none;
+}
+
+#cover .head ul li a{
+    display: inline;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#cover .head ul li{
+    margin-bottom: 30px;
+}
+
+#cover .part1{
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+    flex-basis: 50%;
+    margin-left: 60px;
+}
+
+
+#cover .part1 h1{
+    font-size: 40px;
+    color: deeppink;
+    z-index: 3;
+    letter-spacing: 1.5px;
+    margin-bottom: 70px;
+}
+
+
+#cover .part1 button{
+    text-decoration:  none;
+    color: #fff;
+    background-color: green;
+    padding: 13px 25px;
+    cursor: pointer;
+    margin-right: 30px;
+    border: none;
+    outline: none;
+}
+
+/* Start of part2 */
+
+
+#cover .part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    margin-top: 50px;
+}
+
+#cover .part2 img{
+    width: 300px;
+    height: 400px;
+}
+
+/* End of part2 */
+
+
+
+/* Start of footer */
+
+footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 40px;    
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.circle1{
+    background-color: rgb(255, 107, 131);
+}
+
+.circle2{
+    background-color: rgb(67, 67, 247);
+}
+
+.circle3{
+    background-color: rgb(88, 85, 85);
+}
+
+/* End of footer */
